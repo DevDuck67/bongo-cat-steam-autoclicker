@@ -1,4 +1,4 @@
-# 🐾 Bongo Cat Steam AutoClicker & Precision Click Engine
+# Bongo Cat Steam AutoClicker & Precision Click Engine
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078d4?style=flat-square&logo=windows)](https://github.com/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)](https://www.python.org/)
