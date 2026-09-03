@@ -72,7 +72,7 @@ Manages the application interface and background telemetry:
 #### Option 2: Running from Source
 1. Clone or download the repository:
    ```bash
-   git clone https://github.com/your-username/bongo-cat-steam-autoclicker.git
+   git clone https://github.com/DevDuck67/bongo-cat-steam-autoclicker.git
    cd bongo-cat-steam-autoclicker
    ```
 2. Launch with Administrator privileges:
