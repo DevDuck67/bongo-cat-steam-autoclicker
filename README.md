@@ -66,7 +66,7 @@ Manages the application interface and background telemetry:
 ### Quick Setup
 
 #### Option 1: Standalone Executable (Recommended)
-1. Download `BongoCatAutoClicker.exe` from the latest [Releases](https://github.com/your-username/bongo-cat-steam-autoclicker/releases) page.
+1. Download `BongoCatAutoClicker.exe` from the latest [Releases](https://github.com/DevDuck67/bongo-cat-steam-autoclicker/releases/tag/v1.0.0Standalone) page.
 2. Double-click the executable to launch (no Python installation required).
 
 #### Option 2: Running from Source
