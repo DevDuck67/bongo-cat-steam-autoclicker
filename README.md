@@ -65,15 +65,19 @@ Manages the application interface and background telemetry:
 
 ### Quick Setup
 
-1. **Clone or download the repository:**
+#### Option 1: Standalone Executable (Recommended)
+1. Download `BongoCatAutoClicker.exe` from the latest [Releases](https://github.com/your-username/bongo-cat-steam-autoclicker/releases) page.
+2. Double-click the executable to launch (no Python installation required).
+
+#### Option 2: Running from Source
+1. Clone or download the repository:
    ```bash
    git clone https://github.com/your-username/bongo-cat-steam-autoclicker.git
    cd bongo-cat-steam-autoclicker
    ```
-
-2. **Launch with Administrator privileges:**
-   - Double-click `run_autoclicker.bat` *(recommended — automatically handles Steam UAC permission elevation)*.
-   - OR run directly via PowerShell / Command Prompt:
+2. Launch with Administrator privileges:
+   - Double-click `run_autoclicker.bat` *(automatically handles Steam UAC permission elevation)*.
+   - Or run directly via terminal:
      ```bash
      python bongo_autoclicker.py
      ```
@@ -100,7 +104,15 @@ Standard autoclickers trigger `mouse_down` and `mouse_up` with zero millisecond 
 Yes. The physical hold-time architecture works seamlessly with any game developed in Godot, Unity, Unreal Engine, or Electron.
 
 #### Is Administrator mode necessary?
-Steam runs with elevated permissions on Windows by default. To send input events to an elevated window, the autoclicker process must also run with administrative privileges (handled automatically by `run_autoclicker.bat`).
+Steam runs with elevated permissions on Windows by default. To send input events to an elevated window, the autoclicker process must also run with administrative privileges (handled automatically by `run_autoclicker.bat` and the standalone `.exe`).
+
+#### Why does my antivirus or VirusTotal flag the standalone .exe?
+This is a standard false positive common to PyInstaller-packaged utilities and automation tools:
+- **PyInstaller Packaging:** Standalone executables bundle the runtime and unpack necessary libraries into a temporary directory upon launch. Automated machine-learning heuristics frequently flag this behavior as a generic "Dropper".
+- **Win32 Input Hooks:** The program uses standard Windows APIs (`GetAsyncKeyState` for global hotkey detection and `mouse_event` for click simulation). Heuristic filters often mark global key interceptors as potential keyloggers/injectors.
+- **Code Signing:** As an open-source tool, the executable is not signed with a paid commercial certificate.
+
+The complete codebase is 100% open-source, runs completely offline with zero network connections, and can be inspected in `bongo_autoclicker.py` or executed directly from source.
 
 ---
 
